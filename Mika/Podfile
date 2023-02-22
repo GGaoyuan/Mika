@@ -1,0 +1,38 @@
+#source 'https://github.com/CocoaPods/Specs.git'
+#install! 'cocoapods', :deterministic_uuids => false
+
+
+platform :ios, '15.0'
+inhibit_all_warnings!   #去掉pod里的所有警告
+use_frameworks!
+
+target 'Mika' do
+  pod 'Alamofire'
+  pod 'HandyJSON'
+  pod 'Kingfisher' # 图片加载
+  pod 'SnapKit'
+  pod 'Reusable'
+  pod 'SVProgressHUD'
+  pod 'iCarousel'
+
+  #pod 'YYModel'
+  #pod 'MJRefresh'
+
+  #pod 'JXSegmentedView'
+  #pod 'JXPagingView/Paging'
+  #pod 'IQKeyboardManager'
+  
+  #pod 'lottie-ios'
+  #pod 'KVOController' #安全KVO
+  #pod 'CryptoSwift'
+  #pod 'YYText'
+  #
+  
+  
+  #待删除
+  
+  #pod 'FBMemoryProfiler'
+  #pod 'FBAllocationTracker'
+  #pod 'FBRetainCycleDetector'
+end
+
