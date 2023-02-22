@@ -9,11 +9,21 @@ import UIKit
 
 class HomeViewController: BaseViewController {
 
+    @IBOutlet weak var noticeArea: UIView!
+    @IBOutlet weak var contentArea: UIView!
+    
+    enum HomeItemType {
+        case date
+        case miss
+        case receiveMiss
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
     }
-
+    
 
 }
