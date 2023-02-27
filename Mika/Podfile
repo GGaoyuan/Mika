@@ -28,11 +28,10 @@ target 'Mika' do
   #pod 'YYText'
   #
   
-  
-  #待删除
-  
-  #pod 'FBMemoryProfiler'
-  #pod 'FBAllocationTracker'
-  #pod 'FBRetainCycleDetector'
+  pod 'ACKit', :path => '/Users/zz/Desktop/workspace/ACKit/ACKit'
+
+
+
+
 end
 

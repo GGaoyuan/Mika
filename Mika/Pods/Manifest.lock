@@ -1,4 +1,5 @@
 PODS:
+  - ACKit (0.1.0)
   - Alamofire (5.6.2)
   - HandyJSON (5.0.2)
   - iCarousel (1.8.3)
@@ -12,6 +13,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - ACKit (from `/Users/zz/Desktop/workspace/ACKit/ACKit`)
   - Alamofire
   - HandyJSON
   - iCarousel
@@ -30,7 +32,12 @@ SPEC REPOS:
     - SnapKit
     - SVProgressHUD
 
+EXTERNAL SOURCES:
+  ACKit:
+    :path: "/Users/zz/Desktop/workspace/ACKit/ACKit"
+
 SPEC CHECKSUMS:
+  ACKit: 2da96ecbd52f893b9595f4b5087839df6b293a0e
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
@@ -39,6 +46,6 @@ SPEC CHECKSUMS:
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 9294ebbb8f46731cc0262cbb256cb18410e76c5c
+PODFILE CHECKSUM: b71a7be4bfb4e3d41d9ff393e8b7a60cb2d6c9c8
 
 COCOAPODS: 1.11.3
