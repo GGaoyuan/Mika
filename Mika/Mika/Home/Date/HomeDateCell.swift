@@ -1,5 +1,5 @@
 //
-//  HomeReceiveMissingCell.swift
+//  HomeDateCell.swift
 //  Mika
 //
 //  Created by gaoyuan on 2023/2/22.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class HomeReceiveMissingCell: UICollectionViewCell {
+class HomeDateCell: UICollectionViewCell, NibReusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        backgroundColor = .green
     }
 
 }

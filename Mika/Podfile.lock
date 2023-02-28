@@ -37,7 +37,7 @@ EXTERNAL SOURCES:
     :path: "/Users/zz/Desktop/workspace/ACKit/ACKit"
 
 SPEC CHECKSUMS:
-  ACKit: 2da96ecbd52f893b9595f4b5087839df6b293a0e
+  ACKit: 9ed56d9936839275f1e7bd5b840688aa10589385
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f

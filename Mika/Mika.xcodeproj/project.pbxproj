@@ -26,6 +26,11 @@
 		3A12214929A5F4FD0064B532 /* HomeReceiveMissingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A12214729A5F4FD0064B532 /* HomeReceiveMissingCell.xib */; };
 		3A12214C29A5F50B0064B532 /* HomeAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12214A29A5F50B0064B532 /* HomeAlbumCell.swift */; };
 		3A12214D29A5F50B0064B532 /* HomeAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A12214B29A5F50B0064B532 /* HomeAlbumCell.xib */; };
+		3AC1A65D29AE247300D5D5D5 /* HomeViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1A65C29AE247300D5D5D5 /* HomeViewFlowLayout.swift */; };
+		3AC1A66029AE253500D5D5D5 /* HomeDateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1A65F29AE253500D5D5D5 /* HomeDateModel.swift */; };
+		3AC1A66329AE25AC00D5D5D5 /* HomeMissingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1A66229AE25AC00D5D5D5 /* HomeMissingModel.swift */; };
+		3AC1A66629AE25C300D5D5D5 /* HomeReceiveMissingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1A66529AE25C300D5D5D5 /* HomeReceiveMissingModel.swift */; };
+		3AC1A66929AE25FF00D5D5D5 /* HomeAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1A66829AE25FF00D5D5D5 /* HomeAlbumModel.swift */; };
 		A471A7F6CDEF5E26598F0FF5 /* Pods_Mika.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A1DE4F1C69A33E26C7458F /* Pods_Mika.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +79,11 @@
 		3A12214729A5F4FD0064B532 /* HomeReceiveMissingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeReceiveMissingCell.xib; sourceTree = "<group>"; };
 		3A12214A29A5F50B0064B532 /* HomeAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumCell.swift; sourceTree = "<group>"; };
 		3A12214B29A5F50B0064B532 /* HomeAlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeAlbumCell.xib; sourceTree = "<group>"; };
+		3AC1A65C29AE247300D5D5D5 /* HomeViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewFlowLayout.swift; sourceTree = "<group>"; };
+		3AC1A65F29AE253500D5D5D5 /* HomeDateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDateModel.swift; sourceTree = "<group>"; };
+		3AC1A66229AE25AC00D5D5D5 /* HomeMissingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMissingModel.swift; sourceTree = "<group>"; };
+		3AC1A66529AE25C300D5D5D5 /* HomeReceiveMissingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeReceiveMissingModel.swift; sourceTree = "<group>"; };
+		3AC1A66829AE25FF00D5D5D5 /* HomeAlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAlbumModel.swift; sourceTree = "<group>"; };
 		684A98B914DAC3B9013259E5 /* Pods-Mika.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mika.debug.xcconfig"; path = "Target Support Files/Pods-Mika/Pods-Mika.debug.xcconfig"; sourceTree = "<group>"; };
 		9A5F9FE8D66CC136DEE37000 /* Pods-Mika.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mika.release.xcconfig"; path = "Target Support Files/Pods-Mika/Pods-Mika.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -137,6 +147,7 @@
 		3A1220F529A5B9780064B532 /* Mika */ = {
 			isa = PBXGroup;
 			children = (
+				3AC1A65B29AE235E00D5D5D5 /* Const */,
 				3A12213429A5BEA60064B532 /* Base */,
 				3A12213529A5BEBC0064B532 /* Home */,
 				3A1220F629A5B9780064B532 /* AppDelegate.h */,
@@ -179,19 +190,63 @@
 		3A12213529A5BEBC0064B532 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3AC1A66729AE25EC00D5D5D5 /* Album */,
+				3AC1A66429AE25B100D5D5D5 /* ReceiveMissing */,
+				3AC1A66129AE258400D5D5D5 /* Missing */,
+				3AC1A65E29AE252300D5D5D5 /* Date */,
 				3A12213B29A5EDD00064B532 /* HomeModel.swift */,
 				3A12212C29A5B9C70064B532 /* HomeViewController.swift */,
 				3A12212D29A5B9C70064B532 /* HomeViewController.xib */,
-				3A12213E29A5F4D60064B532 /* HomeDateCell.swift */,
-				3A12213F29A5F4D60064B532 /* HomeDateCell.xib */,
-				3A12214229A5F4EB0064B532 /* HomeMissingCell.swift */,
-				3A12214329A5F4EB0064B532 /* HomeMissingCell.xib */,
-				3A12214629A5F4FD0064B532 /* HomeReceiveMissingCell.swift */,
-				3A12214729A5F4FD0064B532 /* HomeReceiveMissingCell.xib */,
-				3A12214A29A5F50B0064B532 /* HomeAlbumCell.swift */,
-				3A12214B29A5F50B0064B532 /* HomeAlbumCell.xib */,
+				3AC1A65C29AE247300D5D5D5 /* HomeViewFlowLayout.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3AC1A65B29AE235E00D5D5D5 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		3AC1A65E29AE252300D5D5D5 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				3A12213E29A5F4D60064B532 /* HomeDateCell.swift */,
+				3A12213F29A5F4D60064B532 /* HomeDateCell.xib */,
+				3AC1A65F29AE253500D5D5D5 /* HomeDateModel.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
+		3AC1A66129AE258400D5D5D5 /* Missing */ = {
+			isa = PBXGroup;
+			children = (
+				3A12214229A5F4EB0064B532 /* HomeMissingCell.swift */,
+				3A12214329A5F4EB0064B532 /* HomeMissingCell.xib */,
+				3AC1A66229AE25AC00D5D5D5 /* HomeMissingModel.swift */,
+			);
+			path = Missing;
+			sourceTree = "<group>";
+		};
+		3AC1A66429AE25B100D5D5D5 /* ReceiveMissing */ = {
+			isa = PBXGroup;
+			children = (
+				3A12214629A5F4FD0064B532 /* HomeReceiveMissingCell.swift */,
+				3A12214729A5F4FD0064B532 /* HomeReceiveMissingCell.xib */,
+				3AC1A66529AE25C300D5D5D5 /* HomeReceiveMissingModel.swift */,
+			);
+			path = ReceiveMissing;
+			sourceTree = "<group>";
+		};
+		3AC1A66729AE25EC00D5D5D5 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				3A12214A29A5F50B0064B532 /* HomeAlbumCell.swift */,
+				3A12214B29A5F50B0064B532 /* HomeAlbumCell.xib */,
+				3AC1A66829AE25FF00D5D5D5 /* HomeAlbumModel.swift */,
+			);
+			path = Album;
 			sourceTree = "<group>";
 		};
 		9C20423B8ADD20E3892D363A /* Pods */ = {
@@ -383,12 +438,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A12214C29A5F50B0064B532 /* HomeAlbumCell.swift in Sources */,
+				3AC1A66329AE25AC00D5D5D5 /* HomeMissingModel.swift in Sources */,
+				3AC1A66629AE25C300D5D5D5 /* HomeReceiveMissingModel.swift in Sources */,
+				3AC1A65D29AE247300D5D5D5 /* HomeViewFlowLayout.swift in Sources */,
 				3A1220F829A5B9780064B532 /* AppDelegate.m in Sources */,
 				3A12213229A5BB250064B532 /* BaseViewController.m in Sources */,
+				3AC1A66929AE25FF00D5D5D5 /* HomeAlbumModel.swift in Sources */,
 				3A12210929A5B9790064B532 /* main.m in Sources */,
 				3A12213C29A5EDD00064B532 /* HomeModel.swift in Sources */,
 				3A12214429A5F4EB0064B532 /* HomeMissingCell.swift in Sources */,
 				3A12214829A5F4FD0064B532 /* HomeReceiveMissingCell.swift in Sources */,
+				3AC1A66029AE253500D5D5D5 /* HomeDateModel.swift in Sources */,
 				3A12214029A5F4D60064B532 /* HomeDateCell.swift in Sources */,
 				3A12212E29A5B9C70064B532 /* HomeViewController.swift in Sources */,
 			);

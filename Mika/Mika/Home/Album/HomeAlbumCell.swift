@@ -1,5 +1,5 @@
 //
-//  HomeMissingCell.swift
+//  HomeAlbumCell.swift
 //  Mika
 //
 //  Created by gaoyuan on 2023/2/22.
@@ -7,11 +7,12 @@
 
 import UIKit
 
-class HomeMissingCell: UICollectionViewCell {
+class HomeAlbumCell: UICollectionViewCell, NibReusable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        backgroundColor = .red
     }
 
 }

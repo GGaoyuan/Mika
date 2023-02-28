@@ -7,22 +7,16 @@
 
 import UIKit
 
-protocol HomeModel: NSObjectProtocol {
+class HomeModel: NSObject {
     
+    static let dataSource = HomeModel()
+    
+    var dateModel = HomeDateModel()
+    
+    var missingModel = HomeMissingModel()
+    
+    var receiveMissingModel = HomeReceiveMissingModel()
+     
+    var albumModel = HomeAlbumModel()
 }
 
-class HomeDateModel: NSObject, HomeModel {
-    
-}
-
-class HomeMissingModel: NSObject, HomeModel {
-    
-}
-
-class HomeReceiveMissingModel: NSObject, HomeModel {
-    
-}
-
-class HomeAlbumModel: NSObject, HomeModel {
-    
-}
