@@ -16,20 +16,17 @@ class HomeViewController: BaseViewController {
     
     private var collectionView: UICollectionView!
     
-//    private var model = HomeModel()
+    private var homeModel = HomeModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
-        let layout = HomeViewFlowLayout()
-//        let itemWidth: CGFloat = 60
-//        let itemSize = CGSize(width: itemWidth, height: itemWidth)
-//        let lineItemNum: CGFloat = 4
-//        let minimumInteritemSpacing = (Device_ScreenWidth - itemWidth * lineItemNum - 20 * 2) / lineItemNum
-//        layout.itemSize = itemSize
-//        layout.minimumInteritemSpacing = minimumInteritemSpacing
+//        let layout = HomeViewFlowLayout()
+//        layout.delegate = self
+        
+        let layout = UICollectionViewFlowLayout()
         
         collectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.gray
@@ -49,17 +46,41 @@ class HomeViewController: BaseViewController {
 
 }
 
+extension HomeViewController: HomeViewFlowLayoutDelegate {
+    
+}
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if let model = homeModel.dataSource[indexPath.row] as? HomeViewItemLayout {
+            return model.sizeType.rawValue
+        }
+        return .zero
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return homeModel.dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomeDateCell.self)
-//        cell.model = dataSource[indexPath.row]
-//        cell.shaking = isEditing
-        return cell
+        let itemModel = homeModel.dataSource[indexPath.row]
+        if let model = itemModel as? HomeDateModel {
+            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomeDateCell.self)
+            return cell
+        }
+        if let model = itemModel as? HomeAlbumModel {
+            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomeAlbumCell.self)
+            return cell
+        }
+        if let model = itemModel as? HomeMissingModel {
+            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomeMissingCell.self)
+            return cell
+        }
+        if let model = itemModel as? HomeReceiveMissingModel {
+            let cell = collectionView.dequeueReusableCell(for: indexPath, cellType: HomeReceiveMissingCell.self)
+            return cell
+        }
+        return UICollectionViewCell()
     }
 }

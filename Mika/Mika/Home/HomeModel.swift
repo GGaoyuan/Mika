@@ -9,14 +9,19 @@ import UIKit
 
 class HomeModel: NSObject {
     
-    static let dataSource = HomeModel()
-    
-    var dateModel = HomeDateModel()
-    
-    var missingModel = HomeMissingModel()
-    
-    var receiveMissingModel = HomeReceiveMissingModel()
-     
-    var albumModel = HomeAlbumModel()
+//    static let dataSource = HomeModel()
+//
+    var dataSource = [
+        HomeDateModel(),
+        HomeDateModel(),
+        HomeDateModel(),
+        HomeDateModel(),
+        HomeDateModel(),
+        HomeDateModel(),
+        HomeDateModel(),
+        HomeMissingModel(),
+        HomeReceiveMissingModel(),
+        HomeAlbumModel()
+    ]
 }
 
