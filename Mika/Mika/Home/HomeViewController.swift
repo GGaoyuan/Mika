@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import SnapKit
 import ACKit
 
 class HomeViewController: BaseViewController {
@@ -23,10 +22,10 @@ class HomeViewController: BaseViewController {
         
         view.backgroundColor = .white
         
-//        let layout = HomeViewFlowLayout()
-//        layout.delegate = self
+        let layout = HomeViewFlowLayout()
+        layout.delegate = self
         
-        let layout = UICollectionViewFlowLayout()
+//        let layout = UICollectionViewFlowLayout()
         
         collectionView = UICollectionView.init(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.gray
@@ -47,10 +46,14 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: HomeViewFlowLayoutDelegate {
-    
+
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        .zero
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if let model = homeModel.dataSource[indexPath.row] as? HomeViewItemLayout {

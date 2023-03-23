@@ -7,6 +7,10 @@
 
 import UIKit
 
+fileprivate let ItemSpace: CGFloat = 10
+fileprivate let EdgeSpace: CGFloat = 16 //左右间距
+fileprivate let LineSpace: CGFloat = 10 //行间距
+
 enum HomeViewItemSize {
     case smallSquare
     case midSquare
@@ -16,13 +20,18 @@ enum HomeViewItemSize {
     var rawValue: CGSize {
         switch self {
         case .smallSquare:
-            return CGSize(width: 50, height: 50)
+            let width = (ACScreenWidth - (2 * EdgeSpace) - (3 * ItemSpace)) / 4
+            return CGSize(width: width, height: width)
         case .midSquare:
-            return CGSize(width: 100, height: 100)
+            let width = (ACScreenWidth - (2 * EdgeSpace) - ItemSpace) / 2
+            return CGSize(width: width, height: width)
         case .bigSquare:
-            return CGSize(width: 200, height: 200)
+            let width = (ACScreenWidth - (2 * EdgeSpace))
+            return CGSize(width: width, height: width)
         case .rectangle:
-            return CGSize(width: 200, height: 100)
+            let width = (ACScreenWidth - (2 * EdgeSpace))
+            let height = width / 2
+            return CGSize(width: width, height: height)
         }
     }
 }
@@ -37,7 +46,6 @@ extension HomeAlbumModel: HomeViewItemLayout {
         .smallSquare
     }
 }
-
 extension HomeReceiveMissingModel: HomeViewItemLayout {
     var sizeType: HomeViewItemSize {
         .midSquare
@@ -48,17 +56,11 @@ extension HomeMissingModel: HomeViewItemLayout {
         .bigSquare
     }
 }
-
 extension HomeDateModel: HomeViewItemLayout {
     var sizeType: HomeViewItemSize {
         .rectangle
     }
 }
-
-
-
-
-
 
 
 protocol HomeViewFlowLayoutDelegate: UICollectionViewDelegateFlowLayout {}
@@ -79,7 +81,6 @@ class HomeViewFlowLayout: UICollectionViewFlowLayout {
         super.prepare()
         scrollDirection = .vertical
         
-        
         let Section = 0
         guard let collectionView = collectionView else { return }
         //获取元素个数
@@ -91,20 +92,17 @@ class HomeViewFlowLayout: UICollectionViewFlowLayout {
         yOffset = sectionEdgeInsets.top
         maxOddY = yOffset
         maxEvenY = yOffset
+        
+//        let itemSpace: CGFloat = 10
+//        let edge: CGFloat = 20
         //对于每个cell
         for i in 0 ..< count{
-          print(i)
             let indexPath = IndexPath(row: i, section: Section)
-            
             let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             //获取对应的cell的大小
             if let itemSize = delegate.collectionView?(collectionView, layout: self, sizeForItemAt: indexPath) {
-                let y = lastAttribute?.frame.maxY ?? 10
-                attribute.frame = CGRect(x: 20, y: y, width: itemSize.width, height: itemSize.height)
-                lastAttribute = attribute
+                attribute.frame = CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height)
             }
-            
-            
             attributes.append(attribute)
         }
     }

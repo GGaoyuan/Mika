@@ -23,5 +23,10 @@
     "ACKit": [
       "Assets/*.png"
     ]
+  },
+  "dependencies": {
+    "CryptoSwift": [
+
+    ]
   }
 }
