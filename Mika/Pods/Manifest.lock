@@ -4,8 +4,6 @@ PODS:
   - Alamofire (5.6.2)
   - CryptoSwift (1.6.0)
   - HandyJSON (5.0.2)
-  - iCarousel (1.8.3)
-  - Kingfisher (7.4.1)
   - Reusable (4.1.2):
     - Reusable/Storyboard (= 4.1.2)
     - Reusable/View (= 4.1.2)
@@ -15,11 +13,9 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - ACKit (from `/Users/zz/Desktop/workspace/ACKit/ACKit`)
+  - ACKit (from `/Users/zz/Desktop/workspace/ACKit`)
   - Alamofire
   - HandyJSON
-  - iCarousel
-  - Kingfisher
   - Reusable
   - SnapKit
   - SVProgressHUD
@@ -29,27 +25,23 @@ SPEC REPOS:
     - Alamofire
     - CryptoSwift
     - HandyJSON
-    - iCarousel
-    - Kingfisher
     - Reusable
     - SnapKit
     - SVProgressHUD
 
 EXTERNAL SOURCES:
   ACKit:
-    :path: "/Users/zz/Desktop/workspace/ACKit/ACKit"
+    :path: "/Users/zz/Desktop/workspace/ACKit"
 
 SPEC CHECKSUMS:
-  ACKit: 41e9ed026c6449a49cf419b82266d80eae932b30
+  ACKit: 5914b219442376a8c10919f5865c3c7cb661c226
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   CryptoSwift: 562f8eceb40e80796fffc668b0cad9313284cfa6
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
-  iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
-  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   Reusable: 6bae6a5e8aa793c9c441db0213c863a64bce9136
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: b71a7be4bfb4e3d41d9ff393e8b7a60cb2d6c9c8
+PODFILE CHECKSUM: 5c2aad0a6356b9c73a73fb038179d9db7fded0cc
 
 COCOAPODS: 1.11.3

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import ACKit
 fileprivate let ItemSpace: CGFloat = 10
 fileprivate let EdgeSpace: CGFloat = 16 //左右间距
 fileprivate let LineSpace: CGFloat = 10 //行间距
@@ -101,10 +101,22 @@ class HomeViewFlowLayout: UICollectionViewFlowLayout {
             let attribute = UICollectionViewLayoutAttributes(forCellWith: indexPath)
             //获取对应的cell的大小
             if let itemSize = delegate.collectionView?(collectionView, layout: self, sizeForItemAt: indexPath) {
-                attribute.frame = CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height)
+                if let lastAttribute = lastAttribute {
+                    if lastAttribute.frame.maxX + ItemSpace + itemSize.width > ACScreenWidth {
+                        attribute.frame = CGRect(x: 0, y: lastAttribute.frame.maxY + LineSpace, width: itemSize.width, height: itemSize.height)
+                    } else {
+                        attribute.frame = CGRect(x: lastAttribute.frame.maxX + ItemSpace, y: lastAttribute.frame.minY, width: itemSize.width, height: itemSize.height)
+                    }
+                }
+                else {
+                    attribute.frame = CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height)
+                }
+                
+                lastAttribute = attribute
             }
             attributes.append(attribute)
         }
+        lastAttribute = nil
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {

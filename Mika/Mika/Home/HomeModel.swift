@@ -21,6 +21,10 @@ class HomeModel: NSObject {
         HomeDateModel(),
         HomeMissingModel(),
         HomeReceiveMissingModel(),
+        HomeAlbumModel(),
+        HomeAlbumModel(),
+        HomeAlbumModel(),
+        HomeAlbumModel(),
         HomeAlbumModel()
     ]
 }

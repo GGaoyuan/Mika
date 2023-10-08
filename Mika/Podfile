@@ -9,11 +9,11 @@ use_frameworks!
 target 'Mika' do
   pod 'Alamofire'
   pod 'HandyJSON'
-  pod 'Kingfisher' # 图片加载
+  #pod 'Kingfisher' # 图片加载
   pod 'SnapKit'
   pod 'Reusable'
   pod 'SVProgressHUD'
-  pod 'iCarousel'
+  #pod 'iCarousel'
 
   #pod 'YYModel'
   #pod 'MJRefresh'
@@ -28,9 +28,15 @@ target 'Mika' do
   #pod 'YYText'
   #
   
-  pod 'ACKit', :path => '/Users/zz/Desktop/workspace/ACKit/ACKit'
+  pod 'ACKit', :path => '/Users/zz/Desktop/workspace/ACKit'
 
-
+  post_install do |installer|
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+      end
+    end
+  end
 
 
 end
